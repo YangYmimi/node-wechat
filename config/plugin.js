@@ -6,4 +6,10 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
+
+  // enable redis
+  redis: {
+    enable: true,
+    package: 'egg-redis',
+  },
 };

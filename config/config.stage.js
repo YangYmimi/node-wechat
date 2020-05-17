@@ -16,14 +16,25 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1589512117074_5417';
 
   // add your middleware config here
-  config.middleware = [
-    'errorHandler',
-  ];
+  config.middleware = [];
 
-  // 所有请求 url
-  config.url = {
-    WX_ACCESSTOKEN: 'https://api.weixin.qq.com/cgi-bin/token',
-    WX_JSAPI_TICKET: 'https://api.weixin.qq.com/cgi-bin/ticket/getticket',
+  // set local redis config
+  config.redis = {
+    client: {
+      host: '',
+      port: 6379,
+      username: '',
+      password: '',
+      db: 0,
+    },
+  };
+
+  // set weixin config
+  // 配置个人的微信测试号即可
+  config.wx = {
+    APPID: '',
+    APPSECRET: '',
+    TOKEN: '',
   };
 
   // add your user config here
